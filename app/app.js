@@ -6,10 +6,10 @@ function homeController() {
     this.greeting = 'Hola!';
 }
 
-var myComponent = {
-  template: '<div>{{ homeController.greeting }}</div>',
+var angularComponent = {
+  template: '<div>{{ homeCtrl.greeting }}</div>',
   controller: homeController,
-  controllerAs:'homeController'
+  controllerAs:'homeCtrl'
 };
 
-ngModule.component('myComponent', myComponent);
+ngModule.component('angularComponent', angularComponent);
