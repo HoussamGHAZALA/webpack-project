@@ -2,11 +2,14 @@ var angular = require('angular');
 
 var ngModule = angular.module('app', []);
 
-
-function homeComponent($scope) {
-    var homeCtrl = this;
-    homeCtrl.greeting = 'Hola!';
+function homeController() {
+    this.greeting = 'Hola!';
 }
 
-ngModule.controller('homeComponent', homeComponent);
+var myComponent = {
+  template: '<div>{{ homeController.greeting }}</div>',
+  controller: homeController,
+  controllerAs:'homeController'
+};
 
+ngModule.component('myComponent', myComponent);
