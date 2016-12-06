@@ -1,0 +1,26 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "clean-install": "npm run clean && npm install",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base app",
+    "test": "karma start",
+    "e2e": "protractor protractor.conf.js",
+    "test-watch": "karma start --no-single-run --auto-watch",
+    "lint": "tslint 'src/**/*.ts'",
+    "ci": "npm run clean-install && npm run lint && npm test"
+  },
+  "dependencies": {
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
